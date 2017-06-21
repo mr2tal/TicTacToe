@@ -13,7 +13,6 @@ namespace TEC_Final_Project_NRB
         static void Main(string[] args)
         {
             Menu m = new Menu();
-            Game g = new Game();
 
             m.PrintMenu();
 

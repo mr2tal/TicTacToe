@@ -6,9 +6,11 @@ using System.Threading.Tasks;
 
 namespace TEC_Final_Project_NRB
 {
-    class Game
+    class TicTacToe
     {
-        public void TicTacToe()
+
+
+        public void TicTacToeGame()
         {
             char[] arr = { '0', '1', '2', '3', '4', '5', '6', '7', '8' };
             int player = 0;
@@ -17,7 +19,7 @@ namespace TEC_Final_Project_NRB
             Console.WriteLine("Welcome to Tic tac toe \n");
             while (win == 0)
             {
- 
+               
                 Console.WriteLine("{0} {1} {2}", arr[0], arr[1], arr[2]);
                 Console.WriteLine("{0} {1} {2}", arr[3], arr[4], arr[5]);
                 Console.WriteLine("{0} {1} {2}", arr[6], arr[7], arr[8]);
@@ -64,7 +66,6 @@ namespace TEC_Final_Project_NRB
                     }
                 }
 
-                //win conditions
                 if (arr[0] == arr[1] && arr[1] == arr[2])
                 {
                     win = 1;
@@ -101,9 +102,6 @@ namespace TEC_Final_Project_NRB
                 {
                     win = 2;
                 }
-            
-
-
             }
             if (win == 1)
             {
@@ -136,19 +134,17 @@ namespace TEC_Final_Project_NRB
                 Console.WriteLine("Press any key to continue...");
                 Console.ReadKey();
             }
+        }
+
+        public void WinCondition()
+            {
                 
-           
+            }
+    
 
 
+        
 
-        }
-
-
-        public void FourOnARow()
-        {
-            Console.WriteLine("Lorem Ipsum");
-            Console.ReadKey();
-            Console.WriteLine("Press any key to continue...");
-        }
     }
 }
+

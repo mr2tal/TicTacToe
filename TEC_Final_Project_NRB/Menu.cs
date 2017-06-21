@@ -9,11 +9,13 @@ namespace TEC_Final_Project_NRB
     class Menu
     {
         Game g = new Game();
+        TicTacToe T = new TicTacToe();
         string input1;
         public void PrintMenu()
         {
             while (true)
             {
+                Console.Clear();
                 Console.WriteLine("____________________________");
                 Console.WriteLine("Welcome to the game room \n");
                 Console.WriteLine("Choose your game: \n");
@@ -32,7 +34,7 @@ namespace TEC_Final_Project_NRB
                 switch (input)
                 {
                     case 1:
-                        g.TicTacToe();
+                        T.TicTacToeGame();
                         break;
                     case 2:
                         g.FourOnARow();
