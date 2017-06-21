@@ -1,0 +1,6 @@
+c:\users\mr2\documents\visual studio 2015\Projects\TEC_Final_Project_NRB\TEC_Final_Project_NRB\bin\Debug\TEC_Final_Project_NRB.exe.config
+c:\users\mr2\documents\visual studio 2015\Projects\TEC_Final_Project_NRB\TEC_Final_Project_NRB\bin\Debug\TEC_Final_Project_NRB.exe
+c:\users\mr2\documents\visual studio 2015\Projects\TEC_Final_Project_NRB\TEC_Final_Project_NRB\bin\Debug\TEC_Final_Project_NRB.pdb
+c:\users\mr2\documents\visual studio 2015\Projects\TEC_Final_Project_NRB\TEC_Final_Project_NRB\obj\Debug\TEC_Final_Project_NRB.csprojResolveAssemblyReference.cache
+c:\users\mr2\documents\visual studio 2015\Projects\TEC_Final_Project_NRB\TEC_Final_Project_NRB\obj\Debug\TEC_Final_Project_NRB.exe
+c:\users\mr2\documents\visual studio 2015\Projects\TEC_Final_Project_NRB\TEC_Final_Project_NRB\obj\Debug\TEC_Final_Project_NRB.pdb
