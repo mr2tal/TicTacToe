@@ -8,8 +8,10 @@ namespace TEC_Final_Project_NRB
 {
     class Menu
     {
-        Game g = new Game();
+        
         TicTacToe T = new TicTacToe();
+        RockPaperScissor R = new RockPaperScissor();
+
         string input1;
         public void PrintMenu()
         {
@@ -20,7 +22,7 @@ namespace TEC_Final_Project_NRB
                 Console.WriteLine("Welcome to the game room \n");
                 Console.WriteLine("Choose your game: \n");
                 Console.WriteLine("1. Tic Tac Toe \n");
-                Console.WriteLine("2. 4 on a row \n");
+                Console.WriteLine("2. Rock Paper Scissor \n");
                 Console.WriteLine("3. exit");
            
                 input1 = Console.ReadLine();
@@ -37,7 +39,7 @@ namespace TEC_Final_Project_NRB
                         T.TicTacToeGame();
                         break;
                     case 2:
-                        g.FourOnARow();
+                        R.RockPaperScissorGame();
                         break;
                     case 3:
                         System.Environment.Exit(0);

@@ -10,16 +10,18 @@ namespace TEC_Final_Project_NRB
     {
 
 
+        
+
         public void TicTacToeGame()
         {
+            Console.WriteLine("Welcome to Tic tac toe \n");
             char[] arr = { '0', '1', '2', '3', '4', '5', '6', '7', '8' };
             int player = 0;
             string input;
             int win = 0;
-            Console.WriteLine("Welcome to Tic tac toe \n");
             while (win == 0)
             {
-               
+                
                 Console.WriteLine("{0} {1} {2}", arr[0], arr[1], arr[2]);
                 Console.WriteLine("{0} {1} {2}", arr[3], arr[4], arr[5]);
                 Console.WriteLine("{0} {1} {2}", arr[6], arr[7], arr[8]);
@@ -42,7 +44,19 @@ namespace TEC_Final_Project_NRB
                 Console.WriteLine("player {0} choose {1}", player, input);
 
                 int choice = int.Parse(input);
-                if (arr[choice] != 'x' && arr[choice] != 'o')
+                if (choice < 0 || choice > 8)
+                {
+                    Console.WriteLine("Invalid input, try again");
+                    if (player == 1)
+                    {
+                        player = 2;
+                    }
+                    else if (player == 2)
+                    {
+                        player = 1;
+                    }
+                }
+                else if (arr[choice] != 'x' && arr[choice] != 'o')
                 {
                     if (player == 1)
                     {
@@ -65,7 +79,6 @@ namespace TEC_Final_Project_NRB
                         player = 1;
                     }
                 }
-
                 if (arr[0] == arr[1] && arr[1] == arr[2])
                 {
                     win = 1;
@@ -102,6 +115,7 @@ namespace TEC_Final_Project_NRB
                 {
                     win = 2;
                 }
+
             }
             if (win == 1)
             {
@@ -138,8 +152,8 @@ namespace TEC_Final_Project_NRB
 
         public void WinCondition()
             {
-                
-            }
+
+        }
     
 
 
