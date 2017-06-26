@@ -11,7 +11,6 @@ namespace TEC_Final_Project_NRB
         public void RockPaperScissorGame()
         {
             string[] arr = { "rock", "paper", "scissor" };
-            int player = 0;
             string input;
             int win = 0;
             Random rnd = new Random();
@@ -26,7 +25,7 @@ namespace TEC_Final_Project_NRB
                 int choice = int.Parse(input) - 1;
                 if (choice >= 0 && choice < 3)
                 {
-                    Console.WriteLine("Player {0} choose {1}. {2}", player, input, arr[choice]);
+                    Console.WriteLine("Player choose {0}. {1}",input, arr[choice]);
                 }
                 else
                 {

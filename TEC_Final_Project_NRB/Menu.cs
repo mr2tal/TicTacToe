@@ -15,6 +15,7 @@ namespace TEC_Final_Project_NRB
         string input1;
         public void PrintMenu()
         {
+
             while (true)
             {
                 Console.Clear();
