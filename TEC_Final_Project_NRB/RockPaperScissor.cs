@@ -10,7 +10,7 @@ namespace TEC_Final_Project_NRB
     {
         public void RockPaperScissorGame()
         {
-            string[] arr = { "rock", "paper", "scissor" };
+            string[] arr = {"", "rock", "paper", "scissor" };
             string input;
             int win = 0;
             Random rnd = new Random();
@@ -22,26 +22,31 @@ namespace TEC_Final_Project_NRB
 
                 input = Console.ReadLine();
 
-                int choice = int.Parse(input) - 1;
-                if (choice >= 0 && choice < 3)
+                int choice;
+                if (Int32.TryParse(input, out choice) == false)
                 {
-                    Console.WriteLine("Player choose {0}. {1}",input, arr[choice]);
+                    Console.WriteLine("Invalid input");
+                    Console.ReadKey();
+                    RockPaperScissorGame();
                 }
-                else
-                {
-                    Console.WriteLine("invalid input, input should be from 1 to 3");
-                }
+                  else if (choice > 0 && choice < 4)
+                    {
+                        Console.WriteLine("Player choose {0}. {1}", input, arr[choice]);
+                    }
+                    else
+                    {
+                        Console.WriteLine("invalid input, input should be from 1 to 3");
+                    }
                 
-                int cominput = rnd.Next(0, 3);
+                
+                int cominput = rnd.Next(1, 4);
 
                 Console.WriteLine("Computer choose {0}", arr[cominput]);
-                // 1 = draw, 2 = player , 3 = computer
-                // 0 = rock, 1 = paper , 2 = scissor
-                if(choice == 0 && cominput == 0)
-                {
-                    win = 1;
-                }
-                else if (choice == 1 && cominput == 1)
+
+                //choice 1 = rock, 2 = paper , 3 = scissor
+                //win 1 = draw, 2 = player , 3 = computer
+
+                if (choice == 1 && cominput == 1)
                 {
                     win = 1;
                 }
@@ -49,27 +54,31 @@ namespace TEC_Final_Project_NRB
                 {
                     win = 1;
                 }
-                else if (choice == 0 && cominput == 1)
+                else if (choice == 3 && cominput == 3)
                 {
-                    win = 3;
-                }
-                else if (choice == 0 && cominput == 2)
-                {
-                    win = 2;
-                }
-                else if (choice == 1 && cominput == 0)
-                {
-                    win = 2;
+                    win = 1;
                 }
                 else if (choice == 1 && cominput == 2)
                 {
                     win = 3;
                 }
-                else if (choice == 2 && cominput == 0)
+                else if (choice == 1 && cominput == 3)
+                {
+                    win = 2;
+                }
+                else if (choice == 2 && cominput == 1)
+                {
+                    win = 2;
+                }
+                else if (choice == 2 && cominput == 3)
                 {
                     win = 3;
                 }
-                else if (choice == 2 && cominput == 1)
+                else if (choice == 3 && cominput == 1)
+                {
+                    win = 3;
+                }
+                else if (choice == 3 && cominput == 2)
                 {
                     win = 2;
                 }

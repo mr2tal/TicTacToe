@@ -43,10 +43,12 @@ namespace TEC_Final_Project_NRB
 
                 Console.WriteLine("player {0} choose {1}", player, input);
 
-                int choice = int.Parse(input);
-                if (choice < 0 || choice > 8)
+                int choice;
+                
+                if (Int32.TryParse(input,out choice) == false || choice < 0 || choice > 8)
                 {
                     Console.WriteLine("Invalid input, try again");
+                    Console.WriteLine("Choose a value between 0 and 8");
                     if (player == 1)
                     {
                         player = 2;
@@ -69,7 +71,7 @@ namespace TEC_Final_Project_NRB
                 }
                 else
                 {
-                    Console.WriteLine("Invalid input, try again");
+                    Console.WriteLine("spot allready taken, try again");
                     if (player == 1)
                     {
                         player = 2;

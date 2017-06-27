@@ -27,14 +27,18 @@ namespace TEC_Final_Project_NRB
                 Console.WriteLine("3. exit");
            
                 input1 = Console.ReadLine();
-                MenuChoose(int.Parse(input1));
+                MenuChoose(input1);
             }     
            
         }
-        public void MenuChoose(int input)
+        public void MenuChoose(string input)
         {
-       
-                switch (input)
+            int choice;
+            if (Int32.TryParse(input, out choice))
+            {
+
+
+                switch (choice)
                 {
                     case 1:
                         T.TicTacToeGame();
@@ -48,9 +52,16 @@ namespace TEC_Final_Project_NRB
 
                     default:
                         Console.WriteLine("Choose a value of 1 2 or 3");
+                        Console.ReadKey();
                         break;
 
                 }
+
+            } else
+            {
+                Console.WriteLine("Invalid input");
+                Console.ReadKey();
+            }
         }
 
     }
